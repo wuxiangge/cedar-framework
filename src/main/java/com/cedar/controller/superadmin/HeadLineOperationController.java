@@ -10,7 +10,6 @@ import java.util.List;
 
 public class HeadLineOperationController {
 
-
     private HeadLineService headLineService;
 
     public void removeHeadLine(){
