@@ -1,0 +1,15 @@
+package com.cedar.service.combine.impl;
+
+import com.cedar.entity.dto.MainPageInfoDTO;
+import com.cedar.entity.dto.Result;
+import com.cedar.service.combine.HeadLineShopCategoryCombineService;
+
+public class HeadLineShopCategoryCombineServiceImpl2 implements HeadLineShopCategoryCombineService {
+
+    @Override
+    public Result<MainPageInfoDTO> getMainPageInfo() {
+        return null;
+    }
+
+
+}
