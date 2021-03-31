@@ -6,10 +6,12 @@ import com.cedar.entity.dto.Result;
 import com.cedar.service.combine.HeadLineShopCategoryCombineService;
 import com.cedar.service.combine.impl.HeadLineShopCategoryCombineServiceImpl2;
 import lombok.Getter;
+import org.framework.core.annotation.Controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+@Controller
 @Getter
 public class MainPageController {
 

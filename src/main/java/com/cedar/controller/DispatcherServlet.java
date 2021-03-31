@@ -18,7 +18,7 @@ public class DispatcherServlet extends HttpServlet {
         System.out.println("request method is " + req.getMethod());
 
         if (req.getServletPath().equals("/mainPage") && req.getMethod().equals("GET")) {
-            new MainPageController().getMainPageInfo(req,resp);
+            new MainPageController().getMainPageInfo(req, resp);
         }
     }
 }

@@ -3,11 +3,15 @@ package com.cedar.controller.superadmin;
 import com.cedar.entity.bo.ShopCategory;
 import com.cedar.entity.dto.Result;
 import com.cedar.service.solo.ShopCategoryService;
+import org.framework.core.annotation.Controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
+
+
+@Controller
 public class ShopCategoryOperationController {
 
     private ShopCategoryService shopCategoryService;

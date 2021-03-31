@@ -7,9 +7,12 @@ import com.cedar.entity.dto.Result;
 import com.cedar.service.combine.HeadLineShopCategoryCombineService;
 import com.cedar.service.solo.HeadLineService;
 import com.cedar.service.solo.ShopCategoryService;
+import org.framework.core.annotation.Service;
 
 import java.util.List;
 
+
+@Service
 public class HeadLineShopCategoryCombineServiceImpl implements HeadLineShopCategoryCombineService {
 
     private HeadLineService headLineService;
