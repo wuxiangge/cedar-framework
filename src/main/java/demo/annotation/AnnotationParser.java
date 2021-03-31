@@ -5,6 +5,8 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
 public class AnnotationParser {
+
+
     //解析类的注解
     public static  void  parseTypeAnnotation() throws ClassNotFoundException {
         Class clazz = Class.forName("demo.annotation.ImoocCourse");
