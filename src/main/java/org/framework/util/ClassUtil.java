@@ -155,17 +155,24 @@ public class ClassUtil {
         }
     }
 
-
-    public static void setFiled(Field filed, Object target, Object value, boolean accessible) {
-        filed.setAccessible(accessible);
+    /**
+     * 设置类的属性值
+     *
+     * @param field      成员变量
+     * @param target     类实例
+     * @param value      成员变量的值
+     * @param accessible 是否允许设置私有属性
+     */
+    public static void setField(Field field, Object target, Object value, boolean accessible) {
+        field.setAccessible(accessible);
         try {
-            filed.set(target, value);
+            field.set(target, value);
         } catch (IllegalAccessException e) {
-            log.error("set field error " + e);
+            log.error("setField error", e);
             throw new RuntimeException(e);
         }
-
     }
+
 
 
     public static void main(String[] args) {

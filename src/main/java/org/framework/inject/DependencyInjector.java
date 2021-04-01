@@ -1,10 +1,11 @@
-package org.framework.inject.annotation;
+package org.framework.inject;
 
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.framework.core.BeanContainer;
+import org.framework.inject.annotation.Autowired;
 import org.framework.util.ClassUtil;
 
 import java.lang.reflect.Field;
@@ -34,9 +35,9 @@ public class DependencyInjector {
 
         for (Class<?> clazz : classSet) {
 
-            Field[] fields = clazz.getFields();
+            Field[] fields = clazz.getDeclaredFields();
 
-            if (fields == null || fields.length == 0) {
+            if (fields.length == 0) {
                 continue;
             }
 
@@ -55,10 +56,8 @@ public class DependencyInjector {
                         throw new RuntimeException("unable to inject relevant type, target field is: " + fieldClass.getName());
                     } else {
                         Object targetBean = beanContainer.getBean(clazz);
-                        ClassUtil.setFiled(field, targetBean, fieldValue, true);
+                        ClassUtil.setField(field, targetBean, fieldValue, true);
                     }
-
-
                 }
             }
         }
@@ -75,7 +74,7 @@ public class DependencyInjector {
             Class<?> implementedClass = getImplementedClass(fieldType, autowiredValue);
 
             if (implementedClass != null) {
-                return implementedClass;
+                return beanContainer.getBean(implementedClass);
             } else {
                 return null;
             }
