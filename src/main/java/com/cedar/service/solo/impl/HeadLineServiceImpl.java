@@ -12,6 +12,8 @@ import java.util.List;
 @Slf4j
 @Service
 public class HeadLineServiceImpl implements HeadLineService {
+
+
     @Override
     public Result<Boolean> addHeadLine(HeadLine headLine) {
         log.info("addHeadLine被执行啦, lineName[{}],lineLink[{}],lineImg[{}], priority[{}]",

@@ -25,4 +25,6 @@ public class MainPageController {
     public void throwException(){
         throw new RuntimeException("抛出异常测试");
     }
+
+
 }

@@ -8,6 +8,7 @@ import com.cedar.service.combine.HeadLineShopCategoryCombineService;
 import com.cedar.service.solo.HeadLineService;
 import com.cedar.service.solo.ShopCategoryService;
 import org.framework.core.annotation.Service;
+import org.framework.inject.annotation.Autowired;
 
 import java.util.List;
 
@@ -15,9 +16,13 @@ import java.util.List;
 @Service
 public class HeadLineShopCategoryCombineServiceImpl implements HeadLineShopCategoryCombineService {
 
+    @Autowired
     private HeadLineService headLineService;
 
+    @Autowired
     private ShopCategoryService shopCategoryService;
+
+
     @Override
     public Result<MainPageInfoDTO> getMainPageInfo() {
         //1.获取头条列表
